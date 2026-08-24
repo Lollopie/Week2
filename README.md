@@ -2,7 +2,7 @@ Preview link: https://lollopie.github.io/Week2/
 
 ## Homepage:
 
-1. NavBar mobile hamburger menu
+1. NavBar mobile hamburger menu - Daniel
 2. Hero
 3. Information
 4. Quote
