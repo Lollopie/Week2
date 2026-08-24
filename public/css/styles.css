@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto-VariableFont_wdth_wght.ttf") format("truetype");
+    font-weight: 125 950;
+    font-style: normal;
+}
+* {
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    margin: 0;
+}
+header {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.header-container {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 24px;
+    color: #F9FAF8;
+}
+.header-link {
+    text-decoration: none;
+}
+.secondary-text {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+nav {
+    display: flex;
+    gap: 20px;
+}
+.hero-background {
+    background: #1F2937;
+}
+.hero {
+    width: 80vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+.hero > * {
+    flex: 1;
+}
+.hero-main-text {
+    font-size: 48px;
+    font-weight: 800;
+    color: #F9FAF8;
+    margin-top: 0;
+}
+.hero-container {
+    display:flex;
+    justify-content: center;
+}
+.hero-image {
+    display: flex;
+    justify-content: flex-end;
+}
+img {
+  max-width: 100%;
+}
+@media (width < 768px) {
+    .hero {
+        flex-direction: column;
+    }
+    .hero-heading {
+        padding-bottom: 20px;
+    }
+}
+.cta-button {
+    color: white;
+    background-color: #3882F6;
+    width: 150px;
+    padding: 5px 20px 5px 20px;
+    border: 5px;
+    border-radius: 10px;
+    font-size: 22px;
+}               

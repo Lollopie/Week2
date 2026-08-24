@@ -4,20 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[Company Name]</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="public/css/styles.css">
 </head>
 <body>
-    <header>
+    <header class="hero-background">
         <div class="header-container">
             <div class="logo">
                 Header Logo
             </div>
             <nav aria-label="Navigation Bar">
-                <a href="#" class="header-link">header link one</a>
-                <a href="#" class="header-link">header link two</a>
-                <a href="#" class="header-link">header link three</a>
+                <a href="#" class="header-link secondary-text">header link one</a>
+                <a href="#" class="header-link secondary-text">header link two</a>
+                <a href="#" class="header-link secondary-text">header link three</a>
             </nav>
         </div>
     </header>
+    <main>
+        <section class="hero-container hero-background">
+            <div class="hero">
+                <section class="hero-heading">
+                    <p class="hero-main-text">
+                        This website is awesome
+                    </p>
+                    <p class="secondary-text">
+                        This website has some subtext that goes here under the main title. 
+                        It's a smaller font and the color is lower constrast!
+                    </p>
+                    <button class="cta-button">
+                        Sign up
+                    </button>
+                </section>
+                <aside class="hero-image">
+                    <picture>
+                        <source src="public/images/placeholder.png" media="(width >= 1200)">
+                        <source src="public/images/placeholder.png" media="(width >= 768)">
+                        <img src="public/images/placeholder.png">
+                    </picture>
+                </aside>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
