@@ -184,17 +184,16 @@ img {
 }
 
 .info-card-container {
-    flex-basis: 800px;
+    flex-basis: 45vw;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 4vw;
 }
 
 .info-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 0 1 150px;
+    flex: 0 1 auto;
 }
 
 .info-card-image {
@@ -216,6 +215,8 @@ img {
     }
 
     .info-card-container {
+        flex-basis: 65vw;
+        flex-wrap: wrap;
         justify-content: center;
     }
 }
@@ -224,8 +225,29 @@ img {
     .info-card {
         flex-basis: 51%;
     }
-
-    .info-card-container {
-        justify-content: center;
-    }
+}
+.quote {
+    background-color: #E5E7EB;
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    display: flex;
+    justify-content: center;
+}
+.quote-container {
+    width: 45vw;
+}
+.quote-text {
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    color: #1F2937;
+    line-height: 1.3;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.quote-author {
+    text-align: right;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 0;
 }
