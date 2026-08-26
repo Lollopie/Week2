@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoicify</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <header class="hero-background">
+        <div class="header-container">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="public/images/logo.png" alt="Company Logo" class="logo-img">
+                </a>
+            </h1>
+            <input class="side-menu" type="checkbox" id="side-menu" />
+            <label class="hamb" for="side-menu">
+                <i class="fa-solid fa-bars bars"></i>
+                <i class="fa-solid fa-x close"></i>
+            </label>
+            <nav aria-label="Navigation Bar">
+                <ul class="menu">
+                    <li><a href="#" class="header-link secondary-text">About</a></li>
+                    <li><a href="pricing.html" class="header-link secondary-text">Pricing</a></li>
+                    <li><a href="#" class="header-link secondary-text">Features</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <header style="display: flex; flex-direction:column">
+                <h2 id="pricing-heading" class="pricing-header">About Us</h2>
+                <p class="pricing-subheader secondary-dark-text">
+                    Learn more about us.
+                </p>
+            </header>
+            <article class="about-content">
+                <img class="about-img"
+                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/eaboutus1.svg">
+                <div class="about-text">
+                    <h2 class="heading-text">
+                        Our Mission
+                    </h2>
+                    <p class="subheading-text">
+                        Simple invoicing that keeps your business moving.
+                    </p>
+                    <p class="description">
+                        Invoicify helps freelancers and small businesses create professional 
+                        invoices, track payments, and stay on top of their cash flow 
+                        without complicated accounting tools.
+                    </p>
+                    <button class="explore-btn">
+                        Explore
+                    </button>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
