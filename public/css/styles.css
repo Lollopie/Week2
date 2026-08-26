@@ -171,6 +171,11 @@ img {
     font-size: 22px;
 }
 
+.cta-button:hover {
+    background-color: #38e3f6;
+    transition: background-color 200ms linear;
+}
+
 .info-header {
     font-size: 36px;
     font-weight: 800;
@@ -259,7 +264,6 @@ img {
     color: #E5E7EB;
     text-align: center;
 }
-
 /* CTA */
 
 .cta-banner {
@@ -404,4 +408,32 @@ img {
         width: 65vw;
         max-width: none;
     }
+}
+
+/* Incoming branch CTA styles (preserved alongside .cta-banner) */
+.cta {
+    display: flex;
+    justify-content: center;
+    margin: 8vh auto 8vh auto;
+}
+.cta-field {
+    width: 60vw; 
+    background-color: #3882F6;
+    display: flex;
+    justify-content: space-around;
+    padding: 4vh 0 4vh 0;
+    border-radius: 10px;
+}
+.cta-header {
+    color: #F9FAF8;
+    margin: 0;
+}
+.cta-secondary {
+    color: #E5E7EB;
+    margin: 0;
+}
+.cta-button-border {
+    border: #F9FAF8 solid 3px;
+}
+
 }

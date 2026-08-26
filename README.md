@@ -6,7 +6,7 @@ Preview link: https://lollopie.github.io/Week2/
 2. Hero - Lollopie
 3. Information - Lollopie
 4. Quote - Lollopie
-5. Call to action
+5. Call to action - Lollopie
 6. Footer - Lollopie
 
 ## Features:
