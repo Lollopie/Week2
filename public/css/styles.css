@@ -264,12 +264,12 @@ img {
 
 /* Footer */
 .copyright {
-    padding: 3vh 0 3vh 0;
+    padding: 2.5vh 0 2.5vh 0;
     background-color: #1F2937;
 }
 .copyright-text {
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
     color: #E5E7EB;
     text-align: center;
 }
@@ -287,16 +287,16 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5vh 0 5vh 0;
+    padding: 3vh 0 3vh 0;
     border-bottom: 1px solid #374151;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.footer-brand {
+.footer-brand-link {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    text-decoration: none;
 }
 
 .footer-logo {
@@ -318,7 +318,7 @@ img {
 .footer-link {
     color: #E5E7EB;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .footer-link:hover {
