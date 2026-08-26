@@ -9,8 +9,8 @@ Preview link: https://lollopie.github.io/Week2/
 5. Call to action
 6. Footer
 
-## Secondary Page:
+## Features:
 
-## Tertiary Page:
+## Pricing:
 
-## Quaternary Page:
+## About Us:
