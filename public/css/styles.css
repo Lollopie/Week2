@@ -259,3 +259,149 @@ img {
     color: #E5E7EB;
     text-align: center;
 }
+
+/* CTA */
+
+.cta-banner {
+    background-color: #3882F6;
+    display: flex;
+    justify-content: center;
+    padding: 8vh 0 8vh 0;
+}
+
+.cta-banner-container {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta-banner-text {
+    font-size: 36px;
+    font-weight: 800;
+    color: #F9FAF8;
+    margin: 0;
+}
+
+.cta-banner-button {
+    background-color: #F9FAF8;
+    color: #3882F6;
+    flex-shrink: 0;
+}
+
+/* Pricing */
+
+@media (width < 768px) {
+    .cta-banner-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 0 10vh 0;
+}
+
+.pricing-header {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1F2937;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pricing-subheader {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 6vh;
+}
+
+.pricing-cards {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-card {
+    flex: 1 1 250px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vh 2vw 5vh 2vw;
+    border: 2px solid #E5E7EB;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.pricing-card-featured {
+    border: 2px solid #3882F6;
+}
+
+.pricing-card-badge {
+    position: absolute;
+    top: -14px;
+    background-color: #3882F6;
+    color: #F9FAF8;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 12px 4px 12px;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.pricing-card-name {
+    font-size: 24px;
+    color: #1F2937;
+    margin-bottom: 0;
+}
+
+.pricing-card-price {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1F2937;
+    margin: 10px 0 20px 0;
+}
+
+.pricing-card-period {
+    font-size: 18px;
+    font-weight: 400;
+    color: #646567;
+}
+
+.pricing-card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    color: #646567;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pricing-card-button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (width < 768px) {
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card {
+        width: 65vw;
+        max-width: none;
+    }
+}
