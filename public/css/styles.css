@@ -109,14 +109,12 @@ img {
     max-width: 100%;
 }
 
-
-
 .cta-button {
     color: white;
     background-color: #3882F6;
     width: 150px;
     padding: 5px 20px 5px 20px;
-    border: 5px;
+    border: 2px solid #1F2937;
     border-radius: 10px;
     font-size: 22px;
 }
@@ -162,24 +160,6 @@ img {
     text-align: center;
     font-size: 18px;
     color: #646567;
-}
-
-@media (width < 768px) {
-    .info-card {
-        flex-basis: 34%;
-    }
-
-    .info-card-container {
-        flex-basis: 65vw;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-@media (width < 500px) {
-    .info-card {
-        flex-basis: 51%;
-    }
 }
 
 .quote {
@@ -288,18 +268,6 @@ img {
     color: #3882F6;
 }
 
-@media (width < 768px) {
-    .footer-top {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
 /* CTA */
 
 .cta-banner {
@@ -346,7 +314,7 @@ img {
     padding: 10vh 0 10vh 0;
 }
 
-.pricing-header {
+.page-header {
     font-size: 36px;
     font-weight: 800;
     color: #1F2937;
@@ -354,7 +322,7 @@ img {
     margin-bottom: 10px;
 }
 
-.pricing-subheader {
+.page-subheader {
     text-align: center;
     margin-top: 0;
     margin-bottom: 6vh;
@@ -435,18 +403,6 @@ img {
     box-sizing: border-box;
 }
 
-@media (width < 768px) {
-    .pricing-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .pricing-card {
-        width: 65vw;
-        max-width: none;
-    }
-}
-
 /* Incoming branch CTA styles (preserved alongside .cta-banner) */
 .cta {
     display: flex;
@@ -487,7 +443,6 @@ img {
 
 .about-content {
     min-height: 75px;
-    height: fit-content;
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -513,7 +468,6 @@ img {
     color: rgb(102, 102, 102);
     font-size: 25px;
     font-weight: 700;
-    margin-left: 0px;
 }
 
 .about-text .description {
@@ -541,6 +495,26 @@ img {
 }
 
 @media (width < 768px) {
+    .info-card {
+        flex-basis: 34%;
+    }
+
+    .info-card-container {
+        flex-basis: 65vw;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .header-container {
         position: relative;
         align-items: center;
@@ -614,4 +588,23 @@ img {
     .about-img {
         width: 90%;
     }
+
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card {
+        width: 65vw;
+        max-width: none;
+    }
 }
+
+@media (width < 500px) {
+    .info-card {
+        flex-basis: 51%;
+    }
+}
+
+
+
