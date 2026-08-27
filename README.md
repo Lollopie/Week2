@@ -7,11 +7,13 @@ Preview link: https://lollopie.github.io/Week2/
 3. Information - Lollopie
 4. Quote - Lollopie
 5. Call to action - Lollopie
-6. Footer - Lollopie
+6. Footer - Lollopie, Valerija
 
 ## Features:
+Valerija
 
 ## Pricing:
+Valerija
 
 ## About Us:
 Jabezgrif

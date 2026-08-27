@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Invoicify</title>
+    <title>Features | Invoicify</title>
     <link rel="stylesheet" href="public/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -32,38 +32,44 @@
             </nav>
         </div>
     </header>
-
     <main>
         <header style="display: flex; flex-direction:column">
-            <h1 id="page-heading" class="page-header">About Us</h1>
+            <h1 id="page-heading" class="page-header">Everything you need to get paid on time</h1>
             <p class="page-subheader secondary-dark-text">
-                Learn more about us.
+                Simple tools that keep your invoicing on track.
             </p>
         </header>
 
-        <section class="about-content">
-            <img class="about-img"
-                src="public/images/about-illustration.svg"
-                alt="Illustration representing invoice management">
-            <div class="about-text">
-                <h2 class="heading-text">
-                    Our Mission
-                </h2>
-                <p class="subheading-text">
-                    Simple invoicing that keeps your business moving.
-                </p>
-                <p class="description">
-                    Invoicify helps freelancers and small businesses create professional
-                    invoices, track payments, and stay on top of their cash flow
-                    without complicated accounting tools.
-                </p>
-                <button class="cta-button">
-                    Explore
-                </button>
-            </div>
+        <section class="pricing-container" aria-label="Feature list">
+            <ul class="pricing-cards">
+                <li class="pricing-card">
+                    <i class="fa-solid fa-file-invoice-dollar" style="font-size: 32px; color: #3882F6;"></i>
+                    <h3 class="pricing-card-name">Automated invoicing</h3>
+                    <p class="pricing-card-features">
+                        Create and send professional invoices in seconds, with recurring
+                        billing set up once and forgotten.
+                    </p>
+                </li>
+                <li class="pricing-card pricing-card-featured">
+                    <i class="fa-solid fa-bell" style="font-size: 32px; color: #3882F6;"></i>
+                    <h3 class="pricing-card-name">Payment reminders</h3>
+                    <p class="pricing-card-features">
+                        Automatic follow-ups go out before and after a due date, so you
+                        never have to chase a client for payment again.
+                    </p>
+                </li>
+                <li class="pricing-card">
+                    <i class="fa-solid fa-chart-line" style="font-size: 32px; color: #3882F6;"></i>
+                    <h3 class="pricing-card-name">Expense tracking</h3>
+                    <p class="pricing-card-features">
+                        Log expenses as they happen and see exactly where your money is
+                        going, all in one dashboard.
+                    </p>
+                </li>
+            </ul>
         </section>
 
-        <section class="cta">
+                <section class="cta">
             <section class="cta-field">
                 <div class="cta-text">
                     <h2 class="cta-header">
@@ -74,7 +80,7 @@
                     </p>
                 </div>
                 <button class="cta-button cta-button-border">
-                    Sign up
+                    Get started
                 </button>
             </section>
         </section>
@@ -108,4 +114,5 @@
         </div>
     </footer>
 </body>
+
 </html>
