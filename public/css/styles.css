@@ -84,6 +84,10 @@ ul.menu {
     justify-content: space-between;
 }
 
+.hero-secondary {
+    margin-bottom: 30px;
+}
+
 .hero>* {
     flex: 1;
 }
@@ -124,7 +128,13 @@ img {
     transition: background-color 200ms linear;
 }
 
+.info {
+    margin: 2vw auto 4vw auto;
+}
+
 .info-header {
+    margin-top: 0;
+    margin-bottom: 4vh;
     font-size: 36px;
     font-weight: 800;
     color: #1F2937;
@@ -152,7 +162,12 @@ img {
 .info-card-image {
     border: 5px solid #3882F6;
     border-radius: 10px;
-    padding: 5px;
+    padding: 20px;
+}
+
+.info-card-company-name {
+    margin: 10px auto 10px auto;
+    text-align: center;
 }
 
 .info-card-text {
@@ -160,6 +175,7 @@ img {
     text-align: center;
     font-size: 18px;
     color: #646567;
+    margin-top: 0;
 }
 
 .quote {
@@ -230,6 +246,7 @@ img {
 .footer-logo {
     height: 48px;
     width: auto;
+    flex-basis: 150px;
 }
 
 .footer-tagline {
@@ -256,6 +273,7 @@ img {
 .footer-socials {
     display: flex;
     gap: 16px;
+    flex-basis: 150px;
 }
 
 .footer-socials a {
@@ -268,15 +286,18 @@ img {
     color: #3882F6;
 }
 
-
-/* Pricing */
-
-.pricing-container {
+.card-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10vh 0 10vh 0;
+    padding: 0 0 10vh 0;
     overflow: visible;
+}
+
+.page-header-container {
+    display: flex; 
+    flex-direction:column;
+    margin-top: 7vh;
 }
 
 .page-header {
@@ -293,7 +314,7 @@ img {
     margin-bottom: 6vh;
 }
 
-.pricing-cards {
+.card-list {
     width: 92vw;
     display: flex;
     justify-content: center;
@@ -304,7 +325,7 @@ img {
     margin: 0;
 }
 
-.pricing-card {
+.card {
     flex: 1 1 250px;
     max-width: 300px;
     display: flex;
@@ -318,7 +339,7 @@ img {
     transition: transform 250ms ease, box-shadow 250ms ease;
 }
 
-.pricing-card:hover {
+.card:hover {
     transform: scale(1.08);
     z-index: 5;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -340,7 +361,7 @@ img {
     margin: 0;
 }
 
-.pricing-card-name {
+.card-name {
     font-size: 24px;
     color: #1F2937;
     margin-bottom: 0;
@@ -359,7 +380,7 @@ img {
     color: #646567;
 }
 
-.pricing-card-features {
+.card-features {
     list-style: none;
     padding: 0;
     margin: 0 0 30px 0;
@@ -375,7 +396,7 @@ img {
     box-sizing: border-box;
 }
 
-/* Incoming branch CTA styles (preserved alongside .cta-banner) */
+
 .cta {
     display: flex;
     justify-content: center;
@@ -383,11 +404,13 @@ img {
 }
 
 .cta-field {
-    width: 60vw;
+    width: 50vw;
     background-color: #3882F6;
     display: flex;
-    justify-content: space-around;
-    padding: 4vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vh 3vw 4vh 3vw;
+    gap: 10px;
     border-radius: 10px;
 }
 
