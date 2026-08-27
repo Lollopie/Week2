@@ -67,7 +67,7 @@ ul.menu {
     display: none;
 }
 
-nav {
+.main-nav {
     display: flex;
     gap: 20px;
 }
@@ -475,7 +475,7 @@ img {
         padding-inline: 1rem;
     }
 
-    nav {
+    .main-nav {
         box-sizing: border-box;
         display: none;
         width: 100%;
@@ -506,7 +506,7 @@ img {
         display: inline;
     }
 
-    .side-menu:checked~nav {
+    .side-menu:checked~.main-nav {
         display: block;
     }
 
