@@ -82,6 +82,7 @@ ul.menu {
     padding-bottom: 10vh;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .hero-secondary {
@@ -104,13 +105,14 @@ ul.menu {
     justify-content: center;
 }
 
-.hero-image {
+.hero-image-container {
     display: flex;
     justify-content: flex-end;
 }
 
 img {
     max-width: 100%;
+    width: inherit;
 }
 
 .cta-button {
@@ -586,10 +588,16 @@ img {
         flex-basis: 34%;
     }
 
+    .timeline {
+        padding-bottom: 0;
+    }
+
     .timeline-list {
-    flex-direction: column;
-    width: 90vw;
-    gap: 4vh;
+        padding-top: 50px;
+        flex-direction: column;
+        width: 90vw;
+        gap: 4vh;
+        align-items: center;
     }
 
     .info-card-container {
@@ -671,14 +679,20 @@ img {
 
     .hero {
         flex-direction: column;
+        padding-top: 3vh;
     }
 
     .hero-heading {
         padding-bottom: 20px;
     }
 
-    .hero-image {
+    .hero-image-container {
         justify-content: center;
+        width: 80vw;
+    }
+
+    .hero-image {
+        width: 80vw;
     }
 
     .cta-field {
