@@ -162,12 +162,28 @@ img {
 .info-card-image {
     border: 5px solid #3882F6;
     border-radius: 10px;
-    padding: 20px;
+    padding: 6px;
+    width: 110px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.info-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .info-card-company-name {
     margin: 10px auto 10px auto;
     text-align: center;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .info-card-text {
@@ -471,15 +487,127 @@ img {
 
 }
 
-@media (width < 768px) {
+.timeline {
+    padding: 4vh 0 8vh 0;
+    text-align: center;
+}
+
+.timeline-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.timeline-item {
+    flex: 1 1 200px;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top: 4px solid #3882F6;
+    padding-top: 20px;
+}
+
+.timeline-year {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1F2937;
+    margin-bottom: 10px;
+}
+
+.timeline-text {
+    font-size: 16px;
+    color: #646567;
+    margin: 0;
+}
+
+/* Features page */
+
+.feature-rows {
+    width: 70vw;
+    margin: 0 auto;
+    padding: 8vh 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8vh;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 6vw;
+}
+
+.feature-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-icon-wrap {
+    flex: 0 0 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #E5E7EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon {
+    font-size: 56px;
+    color: #3882F6;
+}
+
+.feature-copy {
+    flex: 1;
+}
+
+.feature-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1F2937;
+    margin: 0 0 10px 0;
+}
+
+.feature-text {
+    font-size: 18px;
+    color: #646567;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Tablet & mobile (max-width: 767px)*/
+@media (max-width: 767px) {
     .info-card {
         flex-basis: 34%;
+    }
+
+    .timeline-list {
+    flex-direction: column;
+    width: 90vw;
+    gap: 4vh;
     }
 
     .info-card-container {
         flex-basis: 65vw;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .quote-container {
+        width: 85vw;
+    }
+
+    .quote-text {
+        font-size: 24px;
+    }
+
+    .quote-author {
+        font-size: 18px;
     }
 
     .footer-top {
@@ -549,6 +677,10 @@ img {
         padding-bottom: 20px;
     }
 
+    .hero-image {
+        justify-content: center;
+    }
+
     .cta-field {
         width: 80%;
         flex-direction: column;
@@ -573,78 +705,16 @@ img {
         width: 90%;
     }
 
-    .pricing-cards {
+    .card-list {
         flex-direction: column;
         align-items: center;
     }
 
-    .pricing-card {
+    .card {
         width: 65vw;
         max-width: none;
     }
-}
 
-@media (width < 500px) {
-    .info-card {
-        flex-basis: 51%;
-    }
-}
-
-/* Features page */
-
-.feature-rows {
-    width: 70vw;
-    margin: 0 auto;
-    padding: 8vh 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8vh;
-}
-
-.feature-row {
-    display: flex;
-    align-items: center;
-    gap: 6vw;
-}
-
-.feature-row-reverse {
-    flex-direction: row-reverse;
-}
-
-.feature-icon-wrap {
-    flex: 0 0 160px;
-    height: 160px;
-    border-radius: 50%;
-    background-color: #E5E7EB;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.feature-icon {
-    font-size: 56px;
-    color: #3882F6;
-}
-
-.feature-copy {
-    flex: 1;
-}
-
-.feature-title {
-    font-size: 28px;
-    font-weight: 800;
-    color: #1F2937;
-    margin: 0 0 10px 0;
-}
-
-.feature-text {
-    font-size: 18px;
-    color: #646567;
-    line-height: 1.6;
-    margin: 0;
-}
-
-@media (width < 768px) {
     .feature-rows {
         width: 90vw;
     }
@@ -664,5 +734,17 @@ img {
 
     .feature-icon {
         font-size: 44px;
+    }
+}
+
+/* Small mobile (max-width: 499px) */
+
+@media (max-width: 499px) {
+    .info-card {
+        flex-basis: 51%;
+    }
+
+    .info-card-image {
+        padding: 10px;
     }
 }
