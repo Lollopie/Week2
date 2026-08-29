@@ -649,7 +649,7 @@ img {
     .timeline-list {
         padding-top: 50px;
         flex-direction: column;
-        width: 90vw;
+        max-width: 90vw;
         gap: 4vh;
         align-items: center;
     }
@@ -747,6 +747,10 @@ img {
 
     .hero-image {
         width: 80vw;
+    }
+
+    .hero-image > img {
+        width: 100%;
     }
 
     .cta-field {
