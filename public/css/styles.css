@@ -40,6 +40,13 @@ header {
 
 .header-link {
     text-decoration: none;
+    padding: 5px 10px;
+}
+
+.header-link:hover {
+    background-color: #3882F6;
+    border-radius: 10px;
+    transition: background-color 200ms linear;
 }
 
 .secondary-text {
