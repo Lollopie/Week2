@@ -360,3 +360,132 @@ Why this is the standard approach:
 - **`text-align` typically flips from `center` to `left`** in the vertical version too, since centered text reads oddly in a single-column, left-anchored list.
 
 If you have more than ~6–7 timeline entries, it's also worth considering whether the horizontal version should scroll horizontally on desktop too (with `overflow-x: auto`) rather than squeezing everything into one row — but for a short "About page history" section with a handful of milestones, the stack-on-mobile approach above is usually sufficient.
+
+## PROMPT
+
+Can you review the attached HTML files for how well they follow the attached assignment and suggest possible improvements?
+
+## RESPONSE
+
+I read through the assignment brief and all four HTML files. Here's how the site stacks up, organized by the assignment's own requirements.
+
+What's working well
+Page count: 4 pages (Home, About, Features, Pricing) — right in the "three or four pages" target.
+Shared nav/footer: Identical header, nav, and footer markup across all four pages — consistent and easy to maintain.
+CSS-only burger menu: You're using the checkbox-hack pattern (<input type="checkbox" id="side-menu"> + <label class="hamb" for="side-menu"> with .bars/.close icons) — this is exactly the standard JS-free approach, and no <script> tags appear anywhere, so you're compliant with "no JavaScript."
+Semantic structure: Good use of <header>, <nav aria-label="...">, <main>, <section>, <footer>, <blockquote>, and <aside> (for the hero image). Nav and footer both have aria-label, which is a nice accessibility touch beyond what was required.
+Responsive images: The hero image on index.html uses <picture>/<source> with three breakpoints (1200px, 768px, fallback) — this is the correct technique for art-directed/layout-dependent images and matches what the assignment wants you to be able to justify.
+Font Awesome scope: Only used for icons (burger bars/x, social links, feature icons) — matches the "icons only" restriction.
+No CSS Grid / no JS: Nothing in the HTML suggests either is in play (can't fully confirm Grid without the CSS, see below).
+Landing page sections map to the design: dark hero → "trusted by" info section → quote/testimonial → CTA bar → footer all mirror the provided wireframe's flow.
+Issues worth fixing
+
+1. Heading hierarchy (semantic HTML)
+Every page wraps the logo in <h1 class="logo">, then uses <h2 id="page-heading"> for the actual page title ("About Us", "Get paid faster!", etc.). That means the logo is technically the page's single <h1> on every page, not the content heading — which hurts both semantics and accessibility (screen reader users jump to headings expecting the page's main topic). Recommendation: make the logo a plain <div>/<span>/<p> (or just an <a> with no heading wrapper), and promote the real page heading to <h1>. Then subsection headings ("Our Mission," "Our Journey," feature card names) can be <h2>/<h3> beneath it.
+
+2. No visible Roboto font import
+None of the four HTML files have a <link> to Google Fonts (or similar) in <head>. The assignment explicitly says "Import the Roboto font." If it's done via @import inside styles.css, that's technically valid CSS, but a <link rel="preconnect"> + <link href="fonts.googleapis.com/..."> in the <head> is the more conventional/performant approach and makes it obviously visible to a grader skimming the HTML. Worth double-checking this actually exists somewhere.
+
+3. Reused class names with different meanings
+.card-features is used as a <p> (a sentence of descriptive text) in features.html, but as a <ul> (a bullet list of plan features) in pricing.html. Same class, two different element types and content structures — this will make the CSS harder to maintain and risks unintended style bleed. Suggest splitting into something like .card-description (paragraph) and .card-feature-list (list).
+
+4. Can't verify the CSS-dependent requirements
+styles.css wasn't included in the upload, so I can't confirm:
+
+Flexbox is actually used for the main layouts (and that Grid isn't sneaking in anywhere)
+Media query breakpoints match 375/768/1200px behavior
+The typography spec is followed exactly (48px/extra-bold hero heading, 36px info headers, 36px light-italic quote text, the specific hex colors like 
+#1F2937, 
+#3882F6, 
+#E5E7EB)
+The burger menu's :checked CSS actually toggles the nav correctly
+Images resize inside containers without distortion at each breakpoint
+
+If you upload styles.css (and any images that are missing, like logo.png), I can check those against the assignment's color/typography table directly.
+
+5. Minor polish
+
+<button class="cta-button"> elements have no type="button" — harmless today since there are no <form> elements, but worth adding defensively.
+Stray blank whitespace between the timeline and CTA sections in about.html — cosmetic only.
+Company logos (company1.jpg–company4.jpg) and the about-page illustration are plain <img> tags with no srcset. That's probably fine (they're small/decorative and SVGs scale anyway), but if any are high-res raster photos, consider whether they need srcset for pixel density, and be ready to explain in your write-up why you didn't need responsive markup there.
+One process reminder (not code-related)
+
+The brief requires documenting at least four distinct stages where your team used AI (Think → Try → Ask AI → Understand → Test → Accept/Modify/Reject), and specifically says not to ask AI to fix something before your team has tried it yourselves. That's a submission/documentation requirement, not something visible in the HTML — just flagging it so it doesn't get missed at the end.
+
+If you share styles.css, I can do a second pass focused specifically on the Flexbox layout, media queries, and whether the exact colors/font sizes from the typography sheet are implemented correctly.
+
+## PROMPT
+
+*added file
+
+## RESPONSE
+
+Good — now I can check the CSS against the assignment's technical requirements and the client's exact color/typography spec.
+
+Compliance check
+
+No CSS Grid ✅ — I searched the whole file; every layout technique used is display: flex (or flex-wrap), never grid. You're clean here.
+
+Flexbox for main layouts ✅ — Header, hero, info cards, card grids, footer, CTA, feature rows — all Flexbox. Good, consistent approach throughout.
+
+Roboto imported ✅ (probably) — You're using @font-face pointing to a local .ttf (../fonts/Roboto-VariableFont_wdth_wght.ttf) rather than a Google Fonts <link>. That satisfies "import Roboto" — self-hosting a variable font is arguably the better technique (no external request, works offline, full weight range 125–950). Just make sure that font file actually exists at that relative path relative to the CSS file's location; I don't have it to verify, so double check it resolves correctly from wherever styles.css sits.
+
+CSS-only burger menu ✅ — The checkbox-hack logic checks out: .side-menu:checked ~ .main-nav { display: block; } and the matching bars/close icon toggle. Selector order works because the input comes before both the label and nav in the HTML. No JS.
+
+Typography/color spec — matched almost exactly
+Spec	Required	Your CSS
+Dark bg	
+#1F2937	✅ .hero-background, footer, .copyright
+Hero main text	48px extra-bold 
+#F9FAF8	✅ .hero-main-text — exact match
+Secondary/link text	18px 
+#E5E7EB	✅ .secondary-text — exact match
+CTA/button color	
+#3882F6	✅ .cta-button
+Info header	36px extra-bold 
+#1F2937	✅ .info-header / .page-header
+Quote bg	
+#E5E7EB	✅ .quote
+Quote text	36px light italic 
+#1F2937	✅ .quote-text — exact match
+
+This is genuinely well done — you clearly built the palette as CSS custom values (even without using actual :root variables) and applied it consistently. One gap: the spec calls for "Header Logo Text" — 24px 
+#F9FAF8, but your header uses an <img class="logo-img"> instead of text. That's a fine creative substitution (image logos are common), but it means that specific typography rule in the client spec has no corresponding CSS — worth a one-line note in your documentation explaining the substitution, since a grader checking the spec line-by-line might look for it.
+
+Issues to fix
+
+1. About page breaks the color system
+.about-text .heading-text, .subheading-text, and .description use rgb(51, 51, 51) and rgb(102, 102, 102) at font-size: 25px — these don't match the palette used everywhere else (
+#1F2937 for dark text, 
+#646567 for secondary gray, 36px/18px scale). It reads like leftover styling from an earlier draft. Since the assignment explicitly requires all pages to "remain visually consistent with the landing page," I'd swap these to your established 
+#1F2937 / 
+#646567 values and pick font sizes that match your existing scale (e.g., 36px heading, 18px body) rather than the one-off 25px.
+
+Also .heading-text and .subheading-text share identical font-size: 25px; font-weight: 700 — there's no visual hierarchy between what's supposed to be a heading and a subheading. Worth differentiating (e.g., 28px/800 vs 20px/600).
+
+2. Tablet breakpoint (768px) isn't explicitly tested
+You only have two media queries: max-width: 767px and max-width: 499px. The assignment asks you to test ~768px specifically — at exactly 768px your site falls into the desktop styles (nav bar, not burger menu), since your breakpoint cuts off at 767. That may well be the correct call (768px is often "tablet = full nav"), but you should deliberately verify at 768px that: the 80vw header container doesn't feel cramped, the info-cards row doesn't wrap awkwardly, and nothing overflows — right now there's no tablet-specific adjustment between 768–1199px, everything just relies on your fluid vw units to hold up. Worth an explicit check (not necessarily an explicit media query) at that width.
+
+3. Inline styles in features.html
+The feature icons use style="font-size: 32px; color: #3882F6;" directly in the HTML instead of a CSS class. Not against the rules, but it duplicates values that already exist in your CSS (
+#3882F6) and makes the "one external stylesheet" requirement look less clean on inspection. Move these to a .card-icon class in styles.css.
+
+4. Dead/unused CSS
+.footer-tagline is defined in the stylesheet but doesn't appear in any of the four HTML files. Minor, but worth pruning before submission so the CSS matches what's actually used.
+
+5. width: inherit on the global img rule
+
+css
+img {
+    max-width: 100%;
+    width: inherit;
+}
+
+width: inherit pulls the computed width from the parent, which for most containers (that don't explicitly set a width) resolves to auto anyway — so this mostly works by accident rather than by design. It's safer and more explicit to just use width: auto; (or drop the line, since max-width: 100% alone is what actually prevents overflow). Test this specifically on the .info-card-image and .about-img cases since those have explicit container sizing.
+
+6. .card-features reused for two different structures
+As flagged in the HTML review — it's a <p> on Features and a <ul> on Pricing, but the CSS (display: flex; flex-direction: column; gap: 10px; list-style: none;) is written for the list use case. On the <p> it's harmless (no children to flex/gap), but it's a sign the class is being asked to do two jobs. Splitting into .card-description and .card-feature-list would make the CSS's intent clearer and prevent future bugs if you add child elements to the paragraph.
+
+Overall
+
+This is a strong implementation — the typography/color table match is nearly pixel-perfect against the client spec, the Flexbox-only + no-JS burger menu requirements are correctly satisfied, and the responsive strategy (fluid vw sizing plus two breakpoints) is a reasonable approach. The main thing I'd prioritize before submission is reconciling the About page's color/font values with the rest of the site, since that's the one place where the "must look like parts of the same website" requirement visibly slips.

@@ -14,6 +14,10 @@ At first I just copied the same card layout from the Pricing page for Features, 
 - Added an icon for each feature using Font Awesome: a dollar/invoice icon, a bell icon, and a chart-line icon, one per card.
 - On a phone, there's no room for icon-next-to-text, so each feature stacks into icon-on-top, text-below instead.
 
+Cleaned up inline styles: the feature icons originally had style="font-size: 32px; color: #3882F6;" written directly in the HTML, duplicating values that already existed in the CSS. Moved these into the existing .feature-icon class instead, so styling stays centralized in the stylesheet.
+
+Fixed a leftover duplicate class (class="feature-row feature-row") on one of the rows from earlier layout experiments.
+
 ## Footer
 
 The footer at the bottom of every page has our logo, links to the other pages, and social media icons - the same footer appears identically on every page of the site. Originally the footer just had a copyright line, so I built it out further by adding the logo, page links, and GitHub/Twitter/LinkedIn icon links.
@@ -26,6 +30,15 @@ The footer at the bottom of every page has our logo, links to the other pages, a
 
 - There were two sign-up buttons on the page, which felt repetitive, so I removed the extra one.
 - Added a timeline section to the page.
+- Fixed leftover colors/font sizes on the Mission text that didn't match the rest of the site's palette (was using off-palette gray values at a flat 25px with no heading/subheading distinction) — replaced with the site's actual color scale and gave the heading proper size/weight so it reads as a real headline.
+- Made "Our Mission" and "Our Journey" both blue to tie them to the site's accent color and make the two sections feel consistent with each other.
+- Added a "By the numbers" stats section between Mission and Journey — three stats in a row that stacks on mobile, with a light gray background band to visually separate it from the white sections around it.
+- Rewrote the page's subheader text to be more specific about what the page covers, instead of a generic placeholder line.
+- Tightened excess spacing between the page header and the content below it - several margins/paddings were stacking up into a larger-than-intended gap.
+
+## Semantic HTML
+
+While reviewing the site, we found that the logo was wrapped in an <h1> tag on every page, which meant the actual page content (page titles, hero heading) was demoted to <h2> — this is bad for accessibility, since screen readers jump to headings expecting the page's main topic, not the logo. Changed the logo to a plain <p> wrapper and promoted each page's real title to <h1> instead, so every page now has exactly one correct top-level heading.
 
 ## Testing and fixes across the whole site
 
@@ -35,6 +48,8 @@ I found and fixed several problems:
 1. **The customer quote section** was too narrow on phones — the text looked squeezed into a tiny box. I added a rule so it gets much wider on small screens and the text size shrinks a little to stay readable.
 2. **The "Trusted By" company logos** were fighting with the size of their containers on small screens, causing them to look distorted or cramped. I fixed this so each logo is boxed to a fixed size and scales down cleanly without stretching or getting cut off.
 3. **Cards overlapping/layering issues** — had to research how to make sure the pricing and feature cards behaved properly and didn't overlap or layer on top of each other at different sizes (mobile, tablet, desktop), since Flexbox can behave unexpectedly when items wrap or shrink.
+4. Unused/leftover CSS — found a .footer-tagline rule with no matching element anywhere in the HTML, and removed it.
+5. Image sizing rule cleanup — the global image rule had width: inherit alongside max-width: 100%, which only worked by coincidence rather than intentionally. Simplified it since max-width: 100% alone is what actually prevents overflow.
 
 I also cleaned up the media queries (the rules that say "on screens smaller than X, change the layout like this") so they're all written the same consistent way, which makes it easier for older browsers to understand them too.
 
