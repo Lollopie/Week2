@@ -13,11 +13,11 @@
 <body>
     <header class="hero-background">
         <div class="header-container">
-            <h1 class="logo">
+            <p class="logo">
                 <a href="index.html">
                     <img src="public/images/logo.png" alt="Invoicify Logo" class="logo-img">
                 </a>
-            </h1>
+            </p>
             <input class="side-menu" type="checkbox" id="side-menu" />
             <label class="hamb" for="side-menu">
                 <i class="fa-solid fa-bars bars"></i>
@@ -35,41 +35,49 @@
     </header>
     <main>
         <header class="page-header-container">
-            <h2 id="page-heading" class="page-header">Everything you need to get paid on time</h2>
+            <h1 id="page-heading" class="page-header">Everything you need to get paid on time</h1>
             <p class="page-subheader secondary-dark-text">
                 Simple tools that keep your invoicing on track.
             </p>
         </header>
-
-        <section class="card-container" aria-label="Feature list">
-            <ul class="card-list">
-                <li class="card">
-                    <i class="fa-solid fa-file-invoice-dollar" style="font-size: 32px; color: #3882F6;"></i>
-                    <h3 class="card-name">Automated invoicing</h3>
-                    <p class="card-features">
+        <section class="feature-rows" aria-label="Feature list">
+            <div class="feature-row">
+                <div class="feature-icon-wrap">
+                    <i class="fa-solid fa-file-invoice-dollar feature-icon"></i>
+                </div>
+                <div class="feature-copy">
+                    <h3 class="feature-title">Automated invoicing</h3>
+                    <p class="feature-text">
                         Create and send professional invoices in seconds, with recurring
                         billing set up once and forgotten.
                     </p>
-                </li>
-                <li class="card">
-                    <i class="fa-solid fa-bell" style="font-size: 32px; color: #3882F6;"></i>
-                    <h3 class="card-name">Payment reminders</h3>
-                    <p class="card-features">
+                </div>
+            </div>
+            <div class="feature-row">
+                <div class="feature-icon-wrap">
+                    <i class="fa-solid fa-bell feature-icon"></i>
+                </div>
+                <div class="feature-copy">
+                    <h3 class="feature-title">Payment reminders</h3>
+                    <p class="feature-text">
                         Automatic follow-ups go out before and after a due date, so you
                         never have to chase a client for payment again.
                     </p>
-                </li>
-                <li class="card">
-                    <i class="fa-solid fa-chart-line" style="font-size: 32px; color: #3882F6;"></i>
-                    <h3 class="card-name">Expense tracking</h3>
-                    <p class="card-features">
+                </div>
+            </div>
+            <div class="feature-row">
+                <div class="feature-icon-wrap">
+                    <i class="fa-solid fa-chart-line feature-icon"></i>
+                </div>
+                <div class="feature-copy">
+                    <h3 class="feature-title">Expense tracking</h3>
+                    <p class="feature-text">
                         Log expenses as they happen and see exactly where your money is
                         going, all in one dashboard.
                     </p>
-                </li>
-            </ul>
+                </div>
+            </div>
         </section>
-
         <section class="cta">
             <section class="cta-field">
                 <div class="cta-text">
