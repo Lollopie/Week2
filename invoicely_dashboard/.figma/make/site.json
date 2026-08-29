@@ -1,0 +1,10 @@
+{
+  "description": "Streamline invoicing and payment processing for freelancers and small businesses with an intuitive dashboard that enhances cash flow management.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
